@@ -20,8 +20,19 @@ export class ItlOathComponent implements OnInit {
       this.oathDetails = data.data;
     })
   }
+
+  showCertificate(){
+    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    this.showOathCertificate = true;
+  }
+
+  closeForm(){
+    this.showOathForm = false;
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
+  }
   openOathForm(){
     this.showOathForm = true;
+    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
   }
   showFilledCertificate(oathData:any){
     this.httpService.takeOath(oathData).subscribe((data) => {
@@ -33,6 +44,7 @@ export class ItlOathComponent implements OnInit {
   testFunc(){
     this.showOathCertificate = false;
     this.personalDetails = undefined;
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
   }
   managePersonalCert(oath:any){
     this.personalDetails = oath;

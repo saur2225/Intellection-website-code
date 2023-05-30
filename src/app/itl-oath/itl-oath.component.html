@@ -1,6 +1,6 @@
 <div class="oathContainer">
   <div class="formWrap" *ngIf="showOathForm" #formWrap>
-    <itl-generic-form [reInitForm]="reInitForm" (closeFrom)="showOathForm = false" (submittedForm)="showFilledCertificate($event)"></itl-generic-form>
+    <itl-generic-form [reInitForm]="reInitForm" (closeFrom)="closeForm()" (submittedForm)="showFilledCertificate($event)"></itl-generic-form>
   </div>
   <div class="certContainer" *ngIf="showOathCertificate">
     <itl-oath-certificate [certData]="filledDetails ? filledDetails?.data : personalDetails" [checkCert]="personalDetails ? true : false" (closeCertificate)="testFunc()" (backToForm)="backToFormHandler($event)"></itl-oath-certificate>
@@ -11,7 +11,7 @@
     <div class="des_des">
       Join our social initiative to create a better world for children. Take an oath to prioritize the welfare of every child and commit to fostering their holistic development.
     </div>
-    <itl-button class="itlBtn" [btnTxt]="'Preview the oath'" (btnClick)="showOathCertificate = true"></itl-button>
+    <itl-button class="itlBtn" [btnTxt]="'Preview the oath'" (btnClick)="showCertificate()"></itl-button>
   </div>
   <div class="oath_search">
     <div class="oath_txt">People who have taken oath </div>

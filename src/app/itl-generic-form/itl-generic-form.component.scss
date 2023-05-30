@@ -9,6 +9,9 @@
     z-index: 2;
     height: calc(100vh + 500px);
 }
+body{
+  overflow: hidden;
+}
 .main_form{
   margin-top: 10%;
   width: 100%;
