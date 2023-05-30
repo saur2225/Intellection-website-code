@@ -1,0 +1,36 @@
+.social_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+    line-height: 0;
+}
+.logo_section{
+    font-size: 0.4rem;
+    display: flex;
+    align-items: center;
+    img{
+        width: 20%;
+    }
+    span{
+        font-weight: bold;
+        margin-left: 5%;
+    }
+}
+.company_name{
+    font-size: 0.2rem;
+}
+.social_icons{
+    img{
+        width: 20%;
+        margin: 5%;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .social_container{
+        flex-wrap: wrap;
+        padding: 2% !important;
+    }
+}

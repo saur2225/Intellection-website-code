@@ -1,0 +1,36 @@
+.itl_home_right{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/home_main.png');
+}
+.itl_home_left_text{
+    font-size: 1rem;
+    flex: 50%;
+    font-weight: 800;
+}
+.itl_home_left_subtxt{
+    font-size: 0.3rem;
+    color: #8B90A0;
+}
+.itl_home_left{
+    padding: 0.3rem;
+}
+.itl_home_container{
+    display: flex;
+    scroll-behavior: smooth;
+    flex: 50%;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.flying_kid{
+    width: 10rem;
+}
+
+@media screen and (max-width: 900px) {
+    .itl_home_container{
+        flex-wrap: wrap;
+        margin-top: 10%;
+    }
+}

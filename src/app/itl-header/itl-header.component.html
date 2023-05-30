@@ -1,0 +1,91 @@
+<!-- Please change the pen width to see the sidebar -->
+<header>
+  <div class="header">
+    <button class="menu-btn" style="right: 11px;" aria-label="Open Menu">
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Open Menu"
+        role="img"
+      >
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+      </svg>
+    </button>
+    <div class="logo">
+      <img class="logo_img" src="../../assets/itl_logo.png" alt="" srcset=""> 
+      <span class="company_name">Intellection</span>
+    </div>
+    <nav class="menu">
+      <div class="drawer">
+        <div class="branding_wrap">
+          <img class="slider_logo" src="../../assets/itl_logo.png" alt="" srcset="">
+          <span class="brand_name">Intellection</span>
+        </div>
+
+        <button class="close-btn" aria-label="Close Menu">
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Close Menu"
+            role="img"
+            color="'#ffffff'"
+          >
+            <path d="M0 0h24v24H0z" fill="#909090"></path>
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              ></path>
+          </svg>
+        </button>
+        <a class="anchorone forMargin" href="/">Home</a>
+        <!-- <a href="/offerings">Our offerings</a> -->
+        <a>
+          <div class="dropdown">
+            <button class="dropbtn" (click)="openOfferings()">
+                Our Offerings
+                <span class="down_arr"><img src="../../assets/down_arr.png" alt="" srcset=""></span>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown" #offeringsDropdown>
+              <a class="anchorone" href="/what-we-do" class="subHeaders">What we do</a>
+              <a class="anchorone" href="/pricing" class="subHeaders">Pricing</a>
+              <!-- <a class="anchorone" href="#" class="subHeaders">Link 3</a> -->
+            </div>
+            </div> 
+        </a>
+        <a>
+          <div class="dropdown">
+            <button class="dropbtn" (click)="openCompany()">
+              Company
+              <span class="down_arr"><img src="../../assets/down_arr.png" alt="" srcset=""></span>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown" #companyDropdown>
+              <a class="anchorone" href="/about" class="subHeaders">About us</a>
+              <a class="anchorone" href="/take-oath" class="subHeaders">Take an oath</a>
+              <!-- <a class="anchorone" href="#" class="subHeaders">Glory Board</a> -->
+            </div>
+            </div> 
+        </a>
+        <a class="anchorone" href="#about">Blog</a>
+        <a class="anchorone" href="/#contactus">Contact</a>
+        <div class="contact_section">
+          <div class="small_contact">
+            Contact us
+          </div>
+          <div class="small_contact_des">
+            <span>133/2,4th floor <br>
+              Janardhan Towers, Residency Rd,<br>
+              Bengaluru, Karnataka</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="blank"></div>
+    </nav>
+  </div>
+</header>

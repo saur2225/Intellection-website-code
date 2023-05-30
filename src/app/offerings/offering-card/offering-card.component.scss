@@ -1,0 +1,71 @@
+.offer_card{
+    display: flex;
+    flex-direction: column;
+    background: #202020;
+    border: 1px solid #7A7171;
+    border-radius: 23.2189px;
+    // max-width: 60vw;
+    // min-width: 16vw;
+    width: max-content;
+    // height: 18vw;
+    color: #ffffff;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    // filter: drop-shadow(0px 4.70907px 0px #EE4C33);
+    // margin: 5%;
+    cursor: pointer;
+}
+.card_name{
+    font-size: 18px;
+    font-weight: 700;
+}
+.card_content{
+    font-size: 0.18rem;
+    max-width: 16vw;
+    // max-width: 100%;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #2E2E2E;
+    border-radius: 23.2189px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .offer_card:hover .overlay {
+    opacity: 1;
+  }
+  .card_img img{
+    width: 1.3rem;
+  }
+  @media screen and (max-width: 900px) {
+    .offer_card{
+        width: 80% !important;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card_content{
+      max-width: none;
+      font-size: 0.3rem;
+    }
+    .card_img img{
+      width:auto;
+    }
+  }
+  .arrow_img{
+    transform: rotate(45deg);
+    width: 50%;
+  }

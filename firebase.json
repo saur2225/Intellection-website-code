@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "site": "intellection-demo",
+    "public": "dist/intellection-web-app",
+    "ignore": [
+      "firebase.json",
+      "**/node_modules/**"
+    ],
+    "rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    } ]
+  }
+}

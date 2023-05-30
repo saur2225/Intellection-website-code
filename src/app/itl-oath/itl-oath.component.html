@@ -1,0 +1,34 @@
+<div class="oathContainer">
+  <div class="formWrap" *ngIf="showOathForm" #formWrap>
+    <itl-generic-form (closeFrom)="showOathForm = false" (submittedForm)="showFilledCertificate($event)"></itl-generic-form>
+  </div>
+  <div class="certContainer" *ngIf="showOathCertificate">
+    <itl-oath-certificate [certData]="filledDetails ? filledDetails?.data : personalDetails" [checkCert]="personalDetails ? true : false" (closeCertificate)="testFunc()"></itl-oath-certificate>
+  </div>
+  <div class="oath_des">
+    <img class="oath_img" src="assets/Layer_1.png" alt="" srcset="">
+    <div class="des_header">Take an oath for a better world</div>
+    <div class="des_des">
+      Join our social initiative to create a better world for children. Take an oath to prioritize the welfare of every child and commit to fostering their holistic development.
+    </div>
+    <itl-button class="itlBtn" [btnTxt]="'Preview the oath'" (btnClick)="showOathCertificate = true"></itl-button>
+  </div>
+  <div class="oath_search">
+    <div class="oath_txt">People who have taken oath </div>
+    <div class="input_container">
+      <input type="text" placeholder="Search by your Unique ID ..." name="" id="">
+      <span><img src="assets/search_icon.png" alt="" srcset=""></span>
+    </div>
+  </div>
+
+  <div class="oath_batches">
+    <div class="oath_batch_single" *ngFor="let oath of oathDetails">
+      <itl-oath-batch [oathData]="oath" (showPersonal)="managePersonalCert(oath)"></itl-oath-batch>
+    </div>
+  </div>
+  <div class="oath_btn">
+    <img src="../../assets/left_left.png" alt="" srcset="">
+    <itl-button class="takeoathbtn" [btnTxt]="'Take an oath for good'" (btnClick)="openOathForm()"></itl-button>
+    <img src="../../assets/left_right.png" alt="" srcset="">
+  </div>
+</div>

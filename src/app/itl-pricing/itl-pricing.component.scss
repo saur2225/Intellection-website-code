@@ -1,0 +1,38 @@
+.pricing_header{
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: 800;
+    margin-top: 2%;
+}
+.pricing_container{
+    background-image: url('../../assets/pricing_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    margin-top: 5%;
+}
+.pricing_subHeader{
+    color: #909090;
+    text-align: center;
+    font-size: 0.4rem;
+}
+.card_wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+}
+.secondCard{
+    margin-left: 40px;
+}
+
+@media screen and (max-width: 900px){
+    .secondCard{
+        margin-left: 0 !important;
+        margin-top: 5%;
+    }
+    .pricing_container{
+        margin-top: 12%;
+    }
+}

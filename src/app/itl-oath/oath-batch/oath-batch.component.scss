@@ -1,0 +1,40 @@
+.batch_main{
+    background-image: url('../../../assets/Layer_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: max-content;
+    display: flex;
+    align-items: baseline;
+    padding: 20%;
+    img{
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+    }
+}
+.batch_container{
+    width: max-content;
+    cursor: pointer;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+}
+.batch_name{
+    font-size: 0.25rem;
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+    max-width: max-content;
+}
+.batch_designation, .batch_company{
+    font-weight: 600;
+    margin-top: 0.06rem;
+}
+.batch_designation, .batch_company, .batch_date{
+    font-size: 0.15rem;
+}
+
+// @media screen and (max-width: 1200px) {
+//     img{
+//         width: 50%;
+//     }
+// }

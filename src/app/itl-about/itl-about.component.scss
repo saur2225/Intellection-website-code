@@ -1,0 +1,195 @@
+.about_container{
+    overflow-x: hidden;
+}
+.about_img{
+    width: 100%;
+}
+.about_img_pic{
+    width: 100%;
+}
+.about_upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+.about_tag{
+  text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.about_sub{
+    font-size: 0.3rem;
+    max-width: 40%;
+    text-align: center;
+}
+.about_left{
+    width: 40%;
+    // flex: 50%;
+}
+
+.about_content{
+    background-color: #3D5CFF;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-top: -5%;
+    justify-content: center;
+    border-bottom-left-radius: 130px;
+    border-bottom-right-radius: 130px;
+}
+.about_left_head{
+    font-size: 0.6rem;
+}
+.about_left_des{
+    font-size: 0.25rem;
+}
+.kid_study{
+    width: 10rem;
+}
+.about_mission{
+    
+    min-height: 60vh;
+    position: relative;
+}
+.mission_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mission_head{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.mission_right{
+    margin-left: 5%;
+    width: 40%;
+}
+.missionDes{
+    font-size: 0.3rem;
+    color: #A3A3A3;
+    margin-top: 3%;
+}
+.goal{
+    position: absolute;
+    top: 0;
+    width: 3rem;
+    right: 0;
+}
+.column {
+    float: left;
+    width: 15%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .column:nth-child(2){
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .row{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  .our_team{
+    background: linear-gradient(180deg, #E6FDFF 0%, rgba(217, 217, 217, 0) 100%);
+    text-align: center;
+    width: 100%;
+    padding-top: 5%;
+    min-height: 80vh;
+  }
+  .meet_head{
+    font-size: 0.4rem;
+    font-weight: bold;
+  }
+  .praise{
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+
+  h2{
+    font-size: 0.3rem;
+  }
+  p{
+    font-size: 0.2rem;
+  }
+
+  .boat{
+    width: 10rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    .about_left{
+        width: 80% !important;
+    }
+    .about_content{
+        flex-direction: column;
+    }
+    .mission_content{
+        flex-direction: column;
+    }
+    .mission_right{
+        width: 80% !important;
+    }
+    .about_mission{
+        margin-bottom: 15%;
+    }
+    .row{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+    .column{
+        width: 80%;
+    }
+
+  h2{
+    font-size: 0.5rem;
+  }
+  p{
+    font-size: 0.3rem;
+  }
+  }

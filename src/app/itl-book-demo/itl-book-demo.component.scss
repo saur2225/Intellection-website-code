@@ -1,0 +1,193 @@
+.main_form_container{
+    position: absolute;
+    width: 100%;
+    background: #000000;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    height: calc(100vh + 500px);
+}
+.main_form{
+  margin-top: 10%;
+  width: 100%;
+}
+.formContainer{
+    position: absolute;
+    left: 50%;
+    margin-top: 10%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    z-index: 2;
+    opacity: 1;
+    padding: 0.5rem;
+    border-radius: 20px;
+    min-width: 20%;
+}
+.top_form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    .mainTxt{
+        font-size: 0.35rem;
+        font-weight: bold;
+    }
+    .subTxt{
+        font-size: 0.2rem;
+        color: #7E7E7E;
+    }
+    span{
+      cursor: pointer;
+      background-color: #3D5CFF;
+      color: #ffffff;
+      line-height: normal;
+      width: 0.31rem;
+      height: 0.31rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 0.25rem;
+    }
+}
+  
+  .uploadimg {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+  .hoverable{
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+  }
+  .hoverable .hover-text{
+    position: absolute;
+    display: none;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%,-50%);   
+    z-index: 2;
+  }
+  .hoverable .background{
+    position: absolute;
+    display: none;
+    top: 0;
+    left:  0;
+    bottom: 0;
+    right: 0;
+    background-color:rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .hoverable:hover .hover-text{
+    display: block;
+  }
+  .hoverable:hover .background{
+    display: block;
+  }
+  .hover-text{
+    font-size: 0.1rem;
+  }
+  #fileInput{
+    display: none;
+  }
+
+  .floating-label{
+    font-size: 0.2rem;
+  }
+
+
+.input_wrapper{
+  position: relative;
+  line-height: 0;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.inputText{
+  border: none;
+  border-bottom: 1px solid #D2D2D2;
+  width: 100%;
+
+}
+.inputText:focus{
+  outline: none;
+}
+.inputText:focus ~ .floating-label-form,
+.inputText:not(:focus):valid ~ .floating-label-form{
+  top: 8px;
+  outline: none;
+  bottom: 10px;
+  left: 0px;
+  font-size: 0.15rem;
+  opacity: 1;
+  color: #3D5CFF;
+  font-weight: 600;
+}
+
+.inputText {
+  font-size: 14px;
+  height: 35px;
+}
+
+.floating-label-form {
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  top: 28px;
+  white-space: nowrap;
+  transition: 0.2s ease all;
+  font-size: 0.18rem;
+  font-weight: 600;
+  color: #555555;
+}
+
+.image_upload{
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+}
+
+form{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.itlBtnMain{
+  display: flex;
+  justify-content: center;
+  margin-top: 8%;
+}
+.errorLog{
+  margin-top: 3%;
+}
+
+@media screen and (max-width: 900px) {
+  .formContainer{
+    min-width: 80%;
+  }
+  .floating-label-form{
+    font-size: 0.35rem;
+  }
+  .inputText:focus ~ .floating-label-form,
+  .inputText:not(:focus):valid ~ .floating-label-form{
+    font-size: 0.25rem;
+  }
+  .mainTxt{
+    font-size: 0.4rem !important;
+  }.subTxt{
+    font-size: 0.35rem !important;
+  }
+}
+

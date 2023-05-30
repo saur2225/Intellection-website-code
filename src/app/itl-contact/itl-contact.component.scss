@@ -1,0 +1,283 @@
+.contact_container{
+  // background: #D8DAFF;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+.contact_heading{
+  font-size: 44px;
+  font-weight: bold;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .left_contact{
+    max-width: 400px;
+  }
+
+  .main_contact{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    // justify-content: ;
+    // align-items: center;
+  }
+
+
+  
+
+/*slideshow styles*/
+.slideshow {
+  width: 625px;
+  // margin: 0 auto;
+  overflow: hidden;
+  // border: solid 1px white;
+  margin-right: 15%;
+}
+
+.slideshow-container {
+  width: 5000px;
+  font-size: 0;
+  transition: 1s ease;
+  // height: 225px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+.text-container {
+  height: 225px;
+  position: relative;
+}
+
+
+p {
+  position: relative;
+  top: -45%;
+  padding: 5px;
+}
+
+.slide {
+  animation: slide 24s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  12.5% {
+    transform: translateX(0%);
+  }
+  
+  25% {
+    transform: translateX(-25%);
+  }
+  
+  37.5% {
+    transform: translateX(-25%);
+  }
+  
+  50% {
+    transform: translateX(-50%);
+  }
+  
+  62.5% {
+    transform: translateX(-50%);
+  }
+  
+  75% {
+    transform: translateX(-75%);
+  }
+  
+  87.5% {
+    transform: translateX(-75%);
+  }
+  
+  99% {
+    transform: translateX(-75%);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.p {
+  margin-top: 140px;
+  text-align: center;
+}
+
+.contact_form{
+  background: #ffffff;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 50%;
+  padding: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  // margin-left: 15%;
+}
+input{
+  min-width: 4rem;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #7E7E7E;
+  padding: 15px 0px;
+  margin-bottom: 10px;
+  font-size: 0.3rem;
+}
+
+input::placeholder{
+  font-size: 0.25rem;
+}
+
+.form_heading{
+  font-size: 0.3rem;
+  font-weight: bold;
+}
+
+.form_subHeading{
+  color: #7E7E7E;
+  margin-bottom: 30px;
+  font-size: 0.25rem;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3.5;
+}
+.slider{
+    position: relative;
+     max-width: 40rem; 
+    height: 70vh; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slide_new{ 
+    position: absolute;
+    top:0;
+    width: 100%;
+    // height: 26.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+}
+.slide_new > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+button{
+    background: none;
+    border: none;
+}
+button .fas{
+    color: rgba(255, 255, 255, .5);
+}
+.btn-slide{
+    position:absolute;
+    top:50%;
+    z-index: 10;
+
+    height: 5.5rem;
+    width: 5.5rem;
+    cursor: pointer;
+}
+.prev{
+    left:3rem;
+    transform: translate(-50%, -50%);
+}
+.next{
+    right: 3rem;
+    transform: translate(50%, -50%); 
+}
+.dots-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.dot{
+    width: 25px;
+    height: 5px;
+    margin: 15px 5px;
+    border-radius: .5rem;
+    background: rgba(39,39,39, .5);
+    cursor: pointer;
+}
+.dot.active{
+background:#272727;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 900px){
+  .slide_new > img{
+    width: 100% !important;
+  }
+  .form_heading{
+    font-size: 0.8rem !important;
+  }
+  input{
+    min-width: 8rem !important;
+  }
+}
+.formSuccess{
+  color: green;
+  font-size: 0.15rem;
+}
+.itlBtn{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+@media screen and (min-width: 900px) {
+  .slider_container{
+    width: 30%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .slider_container{
+    width: 100% !important;
+  }
+  .slider{
+    height: 60vh !important;
+  }
+  input{
+    min-width: 4rem;
+    font-size: 0.35rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #7E7E7E;
+    padding: 15px 0px;
+    margin-bottom: 10px;
+    font-size: 0.3rem;
+  }
+  
+  input::placeholder{
+    font-size: 0.35rem;
+  }
+}

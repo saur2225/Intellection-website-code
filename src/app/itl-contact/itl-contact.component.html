@@ -1,0 +1,73 @@
+<div class="contact_container" #contact>
+  <div class="contact_heading">Get in touch</div>
+
+  <div class="main_contact">
+    <div class="slider_container">
+      <div class="slider">
+        <div class="slide_new">
+              <img src="../../assets/contact_1.png" alt="Photo1"/>
+          </div>
+        <div class="slide_new">
+              <img src="../../assets/contact_2.png" alt="Photo3"/>
+          </div> 
+        <div class="slide_new">
+              <img src="../../assets/contact_3.png" alt="Photo2"/>
+          </div>
+        <div class="slide_new">
+              <img src="../../assets/contact_4.png" alt="Photo3"/>
+          </div> 
+          <div class="slide_new">
+            <img src="../../assets/contact_5.png" alt="Photo3"/>
+        </div> 
+        <div class="slide_new">
+          <img src="../../assets/contact_6.png" alt="Photo3"/>
+      </div> 
+      <div class="slide_new">
+        <img src="../../assets/contact_7.png" alt="Photo3"/>
+    </div> 
+      </div>
+      <div class="dots-container">
+              <!-- <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
+              <span class="dot" data-slide="4"></span>
+              <span class="dot" data-slide="5"></span>
+              <span class="dot" data-slide="6"></span> -->
+
+      </div>
+    </div>
+
+    
+    <div class="right_contact">
+      <div class="contact_form">
+        <div class="form_heading">Get started Instantly</div>
+        <div class="form_subHeading">Get started by completing the form</div>
+        <form action="" [formGroup]="contactForm">
+          <!-- <div class="parentName"> -->
+            <input type="text" placeholder="Parent Name" formControlName="parentName">
+            <span class="errorLog" *ngIf="contactForm.get('parentName')?.touched && contactForm.get('parentName')?.invalid">Please enter valid name</span>
+          <!-- </div> -->
+          <!-- <div class="parentEmail" placeholder="Email"> -->
+            <input type="text" placeholder="Email" formControlName="email">
+            <span class="errorLog" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">Please enter valid email</span>
+          <!-- </div> -->
+          <!-- <div class="childName" placeholder="Child's Name"> -->
+            <input type="text" placeholder="Child's Name" formControlName="childName">
+            <span class="errorLog" *ngIf="contactForm.get('childName')?.touched && contactForm.get('childName')?.invalid">Please enter valid name</span>
+          <!-- </div> -->
+          <!-- <div class="childClass" placeholder="Child's Class"> -->
+            <input type="text" placeholder="Child's Class" formControlName="childClass">
+            <span class="errorLog" *ngIf="contactForm.get('childClass')?.touched && contactForm.get('childClass')?.invalid">Please enter valid details</span>
+          <!-- </div> -->
+          <!-- <div class="phoneNumber" placeholder="Phone Number"> -->
+            <input type="text" placeholder="Phone Number" formControlName="phoneNumber">
+            <span class="errorLog" *ngIf="contactForm.get('phoneNumber')?.touched && contactForm.get('phoneNumber')?.invalid">Please enter valid phone number</span>
+          <!-- </div> -->
+            <div class="formSuccess" *ngIf="successSubmission">Thanks for contacting! We will revert back to you soon</div>
+          <itl-button class="itlBtn" [btnTxt]="'Submit'" [fontSizeValue]="'0.25rem'" (click)="submitContactForm()" [disableBtn]="contactForm.invalid"></itl-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

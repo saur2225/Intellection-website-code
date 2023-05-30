@@ -1,0 +1,41 @@
+<div class="main_form_container" #formOverlay></div>
+    <div class="formContainer" #form>
+        <div class="top_form">
+            <div class="formTxt">
+                <div class="mainTxt">Book a demo</div>
+                <div class="subTxt">Get started by completing the form</div>
+            </div>
+            <span (click)="closeFrom.emit()">&times;</span>
+        </div>
+        <div class="main_form">
+            <form action="" [formGroup]="bookDemoForm">
+                <div class="input_wrapper">
+                    <input type="text" class="inputText" formControlName="parentName" required/>
+                    <span class="floating-label-form">Parent Name</span>
+                    <span class="errorLog" *ngIf="bookDemoForm.get('parentName')?.touched && bookDemoForm.get('parentName')?.invalid">Please enter valid name</span>
+                </div>
+                <div class="input_wrapper">
+                    <input type="text" class="inputText" formControlName="childName" required/>
+                    <span class="floating-label-form">Child Name</span>
+                    <span class="errorLog" *ngIf="bookDemoForm.get('childName')?.touched && bookDemoForm.get('childName')?.invalid">Please enter valid name</span>
+                </div>
+                <div class="input_wrapper">
+                    <input type="text" class="inputText" formControlName="childClass" required/>
+                    <span class="floating-label-form">Child Class</span>
+                    <span class="errorLog" *ngIf="bookDemoForm.get('childClass')?.touched && bookDemoForm.get('childClass')?.invalid">Please enter valid class</span>
+                </div>
+                <div class="input_wrapper">
+                    <input type="text" class="inputText" formControlName="phoneNumber" required/>
+                    <span class="floating-label-form">Phone Number</span>
+                    <span class="errorLog" *ngIf="bookDemoForm.get('phoneNumber')?.touched && bookDemoForm.get('phoneNumber')?.invalid">Please enter valid phone number</span>
+                </div>
+                <div class="input_wrapper">
+                    <input type="text" class="inputText" formControlName="city" required/>
+                    <span class="floating-label-form">City</span>
+                    <span class="errorLog" *ngIf="bookDemoForm.get('city')?.touched && bookDemoForm.get('city')?.invalid">Please enter valid city</span>
+                </div>
+                <div *ngIf="successDemo" class="formSuccess">Thanks for scheduling a demo! We will revert back soon</div>
+                <itl-button class="itlBtnMain" [btnTxt]="'Submit'" [fontSizeValue]="'0.2rem'" (btnClick)="submitDemo()" [disableBtn]="bookDemoForm.invalid"></itl-button>
+            </form>
+        </div>
+    </div>

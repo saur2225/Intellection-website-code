@@ -1,0 +1,153 @@
+.certOverlay{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #000000;
+    opacity: 0.6;
+    z-index: 2;
+}
+.certificateContainer{
+    background-image: url('../../../assets/cert_back.png');
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    max-width: 25%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+}
+.logo_cont{
+    display: flex;
+    justify-content: flex-end;
+    img{
+        width: 0.6rem;
+    }
+}
+.certContent{
+    padding: 0.3rem;
+    border-radius: 20px;
+    background: #FFF7E7;
+    border: 4px solid #FFC6C6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+}
+.main_content{
+    font-size: 0.15rem;
+    font-weight: 600;
+    margin-top: -18%;
+}
+.upperImg{
+    display: flex;
+    width: max-content;
+    background-image: url('../../../assets/Layer_1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(0%, -70%);
+    padding: 0.3rem;
+    box-sizing: border-box;
+    img{
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+    }
+}
+.lowerCert{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid #FFC6C6;
+    margin-top: 5%;
+}
+.left_lower{
+    font-size: 0.13rem;
+}
+.certName{
+    font-weight: 600;
+    border-bottom: 1px solid #000000;
+}
+.right_cert{
+    font-size: 0.12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: 1rem;
+    }
+}
+.companyName{
+    font-weight: 600;
+}
+.forMargin{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.certFooter{
+    margin-top: 2%;
+    font-size: 0.13rem;
+    text-align: center;
+}
+.certBtn{
+    display: flex;
+    margin-top: 5%;
+}
+.closeOathCertificae{
+    position: absolute;
+    right: 2%;
+    // top: 2%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: #3D5CFF;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.5rem;
+    transform: translate(150%, -150%);
+    cursor: pointer;
+    // top: 15%;
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
+  @media screen and (max-width:900px){
+    .certificateContainer{
+        max-width: 100% !important;
+        width: 75%;
+    }
+    .main_content{
+        margin-top: -12%;
+        font-size: 0.25rem !important;
+    }
+    .left_lower{
+        font-size: 0.2rem;
+    }
+    .right_cert{
+        font-size: 0.18rem;
+    }
+    .logo_cont{
+        img{
+            width: 1rem;
+        }
+    }
+  }

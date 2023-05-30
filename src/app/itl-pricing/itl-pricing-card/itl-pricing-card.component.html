@@ -1,0 +1,32 @@
+<div class="pricing_card" *ngIf="pricing">
+  <div class="card_header">{{pricing.year}} Years</div>
+  <div class="card_details">
+    <div class="details_wrapper">
+      <img src="../../../assets/check.png" alt="" srcset="">
+      <span class="detail_name">{{pricing.profits[0]}}</span>
+    </div>
+    <div class="details_wrapper perYear">
+      <img src="../../../assets/check.png" alt="" srcset="">
+      <span class="detail_name">{{pricing.profits[1]}}</span>
+    </div>
+    <div class="details_wrapper">
+      <img src="../../../assets/check.png" alt="" srcset="">
+      <span class="detail_name">{{pricing.profits[2]}}</span>
+    </div>
+    <div class="details_wrapper perYear">
+      <img src="../../../assets/check.png" alt="" srcset="">
+      <span class="detail_name">{{pricing.profits[3]}}</span>
+    </div>
+    <div class="details_wrapper">
+      <img src="../../../assets/check.png" alt="" srcset="">
+      <span class="detail_name">{{pricing.profits[4]}}</span>
+    </div>
+    <div class="details_wrapper perYear">
+      <img src="../../../assets/check.png" alt="" srcset="">
+      <span class="detail_name">{{pricing.profits[5]}}</span>
+    </div>
+  </div>
+
+  <div class="perYear">&#8377; &nbsp;7000/year</div>
+  <itl-button class="pricingBtn" [btnTxt]="'&#8377; &nbsp;21000'"></itl-button>
+</div>

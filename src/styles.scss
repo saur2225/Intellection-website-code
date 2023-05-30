@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,600&display=swap');
+body{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+input:focus{
+    outline: none;
+}
+
+.errorLog{
+    color: red;
+    font-size: 0.12rem;
+    display: flex;
+}
+
+.formSuccess{
+    color: green;
+    font-size: 0.15rem;
+  }
+
+  
+@media screen and (max-width: 900px) {
+    .errorLog{
+        font-size: 0.3rem;
+    }
+    .formSuccess{
+        font-size: 0.3rem;
+    }
+}
+
+@media screen and (min-width: 2401px){
+    body, html{
+        font-size: 114px;
+    }
+}
+
+@media screen and (min-width: 1801px) and (max-width: 2400px){
+    body, html{
+        font-size: 84px;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1800px){
+    body, html{
+        font-size: 74px;
+    }
+}
+ 
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+    body, html{
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    body, html{
+        font-size: 70px;
+    }
+}
+ 
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+    and (orientation: portrait) {
+        body, html{
+            font-size: 54px;
+        }
+}
+ 
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px)
+    and (orientation: landscape) {
+        body, html{
+            font-size: 44px;
+        }
+}
+ 
+/* For Mobile Phones Portrait or Landscape View */
+@media screen
+    and (max-device-width: 640px) {
+        body, html{
+            font-size: 40px;
+        }
+}
+ 
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px)
+    and (max-width: 700px) {
+        body, html{
+            font-size: 34px;
+        }
+}
+ 
+/* For iPhone 5 Portrait or Landscape View */
+/* @media (device-height: 568px)
+    and (device-width: 320px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        body, html{
+            font-size: 34px;
+        }
+} */
+ 
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+/* @media (min-device-height: 667px)
+    and (min-device-width: 375px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+        body, html{
+            font-size: 54px;
+        }
+}; */

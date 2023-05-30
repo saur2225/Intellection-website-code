@@ -1,0 +1,143 @@
+.oathContainer{
+    background: #FFF3DC;
+    display: flex;
+    flex-direction: column;
+}
+.oath_des{
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    text-align: center;
+    background: #ffffff;
+    padding: 0.5rem;
+    margin-top: 8%;
+}
+.des_header{
+    color: #3D5CFF;
+    font-size: 0.5rem;
+    margin-top: -13%;
+    font-weight: bold;
+}
+.des_des{
+    font-size: 0.25rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.oath_img{
+    background: #ffffff;
+    border-radius: 50%;
+    border: 0.2rem solid #ffffff;
+    transform: translate(0%, -75%);
+    width: 1.5rem;
+}
+.itlBtn{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+.oath_search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+}
+.oath_txt{
+    color: #3D5CFF;
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.input_container{
+    background: #ffffff;
+    display: flex;
+    line-height: 0;
+    align-items: center;
+    width: 30%;
+    border-radius: 0.3rem;
+    padding: 0.1rem;
+    margin-top: 1%;
+    input{
+        border: none;
+        padding: 0.1rem 0.2rem;
+        width: 100%;
+        border-radius: 0.3rem;
+    }
+    input::placeholder{
+        font-size: 0.18rem;
+    }
+    input:focus{
+        outline: none;
+    }
+    span{
+        padding: 0.1rem;
+        background: #3D5CFF;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 90%;
+        }
+    }
+}
+
+.oath_batches{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+.oath_btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    margin-bottom: 5%;
+    .takeoathbtn{
+        border: 5px solid #C3A571;
+        border-radius: 15px;
+    }
+    img{
+        width: 8%;
+    }
+}
+.oath_batch_single{
+    margin: 2%;
+    flex: 1 0 21%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .oath_batch_single{
+        // margin: 2%;
+        flex: 1 0 33% !important;
+    }
+    input::placeholder{
+        font-size: 0.3rem !important;
+    }
+    .input_container{
+        width: 60% !important;
+        margin-top: 5% !important;
+        span{
+            padding: 0.2rem 0.1rem;
+            img{
+                width: 70% !important;
+            }
+        }
+    }
+    .oath_search{
+        margin-top: 10% !important;
+    }
+    .des_header{
+        font-size: 0.4rem;
+        margin-top: -25% !important;
+    }
+}

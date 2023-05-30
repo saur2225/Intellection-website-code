@@ -1,0 +1,140 @@
+.whatTxt{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(102.52deg, #FFC122 15.82%, #EE4C33 39.12%, #A571BC 64.5%, #4ACAE7 90.78%);
+    border-top: 0.5rem solid #F1F1F1;
+    border-left: 0.5rem solid #F1F1F1;
+    border-bottom: 0.5rem solid #F1F1F1;
+    display: flex;
+    padding: 1.2rem 1.6rem;
+    border-top-left-radius: 2.4rem;
+    border-bottom-left-radius: 2.4rem;
+}
+.left_upper img{
+    width: 10rem;
+}
+img{
+    width: 5rem;
+}
+.txtMain{
+    font-size: 0.8rem;
+    font-weight: 800;
+    // white-space: nowrap;
+}
+.txtSub{
+    font-weight: 600;
+    font-size: 0.3rem;
+}
+.upperMain{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.whatContent{
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    margin-top: -5%;
+}
+.whatCard{
+    margin-top: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card_head{
+    font-size: 0.6rem;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.card_sub{
+    font-size: 0.3rem;
+    font-weight: bold;
+}
+.og{
+    margin-left: 5%;
+}
+.og_2{
+    margin-left: 15%;
+}
+
+li{
+    font-size: 0.25rem;
+}
+// .cardPoints{
+//     width: 50%;
+// }
+.card_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.card_right{
+    width: 50%;
+    display: flex;
+    // justify-content: flex-end;
+}
+.card_right:nth-child(odd){
+    justify-content: center;
+}
+.card_right:nth-child(even){
+    justify-content: center;
+}
+ul{
+    margin-top: 1.5%;
+    margin-left: -2%;
+}
+@media screen and (max-width: 900px) {
+    .whatCard{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .reverseCard{
+        flex-direction: column-reverse;
+    }
+    .upperMain{
+        flex-direction: column;
+    }
+    .card_right{
+        display: flex;
+        justify-content: center;
+    }
+    .card_right img{
+        width: 60%;
+    }
+    .og{
+        margin-left: 0 !important;
+    }
+    .og_2{
+        margin-left: 0 !important;
+    }
+    img{
+        width: 5rem !important;
+    }
+    .card_right:nth-child(odd){
+    justify-content: center !important;
+    }
+    .card_right:nth-child(even){
+        justify-content: center !important;
+    }
+    ul{
+        margin-left: -7%;
+    }
+    li{
+        font-size: 0.4rem !important;
+    }
+    .whatContent{
+        padding: 1rem !important;
+    }
+    .card_head{
+        font-size: 1rem;
+    }
+    .card_sub{
+        font-size: 0.6rem;
+    }
+    .left_upper img{
+        width: 10rem !important;
+    }
+}

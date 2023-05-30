@@ -1,0 +1,17 @@
+button{
+    padding: 0.2rem 0.6rem;
+    font-weight: 600;
+    background: #3D5CFF;
+    border: none;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) 
+{
+    button{
+        font-size: 0.3rem !important;
+        padding: 0.3rem 0.6rem;
+    } 
+}

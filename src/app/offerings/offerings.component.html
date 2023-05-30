@@ -1,0 +1,23 @@
+<div class="offerings_container">
+  <div class="offeringHeader">Our Offerings</div>
+  <div class="offeringSub">India’s First <span class="bold_one">AI based</span> data driven career <span class="bold_one">decision making</span> platform</div>
+
+  <div class="offeringsContent">
+    <div class="upperOffer">
+      <offering-card class="first_card" [cardHeader]="'Academics'" [cardImage]="'assets/33.png'" [cardContent]="content1" (click)="navigatToWhatwedo()"></offering-card>
+      <offering-card class="mid_card" [cardHeader]="'Health'" [cardImage]="'assets/35.png'" [cardContent]="content2" (click)="navigatToWhatwedo()"></offering-card>
+      <offering-card class="last_card" [cardHeader]="'Memories'" [cardImage]="'assets/37.png'" [cardContent]="content3" (click)="navigatToWhatwedo()"></offering-card>
+    </div>
+    <div class="lowerOffer">
+      <offering-card class="first_card" [cardHeader]="'Cocurricular'" [cardImage]="'assets/34.png'" [cardContent]="content4" (click)="navigatToWhatwedo()"></offering-card>
+      <offering-card class="mid_card" [cardHeader]="'Webinars'" [cardImage]="'assets/31.png'" [cardContent]="content5" (click)="navigatToWhatwedo()"></offering-card>
+      <offering-card class="last_card" [cardHeader]="'Child Psychologist'" [cardImage]="'assets/32.png'" [cardContent]="content6" (click)="navigatToWhatwedo()"></offering-card>
+    </div>
+  </div>
+
+  <div class="offeringsJoin">
+    <img class="offerImg" src="assets/30.png" alt="" srcset="">
+    <div class="pitch">Hey! Excited to join our community?</div>
+    <itl-button [btnTxt]="'Join now'"></itl-button>
+  </div>
+</div>

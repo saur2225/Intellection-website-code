@@ -1,0 +1,29 @@
+<div class="certOverlay" #certOverlay>
+</div>
+<div class="certificateContainer" #cert>
+  <span class="closeOathCertificae" *ngIf="!certData || checkCert" (click)="closeCert()">&times;</span>
+  <div class="logo_cont">
+    <img class="logo_cert" src="../../../assets/itl_logo.png" alt="" srcset="">
+  </div>
+  <div class="inner_cert">
+    <div class="certContent">
+      <div class="upperImg"><img [src]="certData ? certData.profileUrl : '../../../assets/upload_profile.png'" alt="" srcset=""></div>
+      <span class="main_content">I firmly swear to put the welfare of every child in our community first. I am aware that each kid has particular requirements, and I will make an effort to meet these needs in order to promote the holistic development of the child. I commit to establishing a secure and welcoming atmosphere that supports each child's learning, development, and growth. Since variety and acceptance of differences are crucial to building a thriving community, I will promote both of them. I'll put in endless effort to give them access to materials and experiences that foster the growth of their cognitive, social, emotional, and physical skills. Together with other community members, I will design ground-breaking approaches that foster each child's growth. I am committed to this oath and will fulfill my duties as a member of this community with integrity and dedication.</span>
+      <div class="lowerCert">
+        <div class="left_lower">
+          <div class="certName">{{ certData ? certData.parentName : 'Your Name' }}</div>
+          <div class="certDetails forMargin">{{certData? certData.designation : 'Designation'}} , {{certData? certData.companyName : 'Company name'}}</div>
+          <div class="certDate">{{ certData? certData.createdAt.split('T')[0] : 'Date' }}</div>
+        </div>
+        <div class="right_cert">
+          <img src="../../../assets/cr.png" alt="" srcset="">
+          <div class="certBy forMargin">Certified by <span class="companyName">Intellection</span></div>
+        </div>
+      </div>
+      <div class="certFooter">
+        Email: Community@intellection.life &nbsp; &nbsp; Website: www.intellection.life
+      </div>
+    </div>
+    <itl-button *ngIf="certData && !checkCert" class="certBtn" [btnTxt]="'Submit'" [fontSizeValue]="'0.2rem'" (btnClick)="closeCert()"></itl-button>
+  </div>
+</div>
