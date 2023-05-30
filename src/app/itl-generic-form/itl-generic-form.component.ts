@@ -30,7 +30,7 @@ export class ItlGenericFormComponent implements OnInit, AfterViewInit {
   ngOnInit() { }
   
   ngAfterViewInit(): void {
-    this.form.nativeElement.style.top = (window.pageYOffset-(this.defaultForm ? -50 : 300)) > 0 ? window.pageYOffset-(this.defaultForm ? -50 : 300) : 0 +'px';
+    this.form.nativeElement.style.top = (window.pageYOffset-(this.defaultForm ? -50 : 300)) > 0 ? window.pageYOffset-(this.defaultForm ? -50  : 300) +'px': 0 +'px'; 
     this.formOverlay.nativeElement.style.top = window.pageYOffset-500+'px';
     window.scrollTo(0, window.pageYOffset-350)
   }

@@ -66,7 +66,6 @@ export class ItlHeaderComponent implements OnInit, AfterViewInit {
       });
       });
     }
-
   }
 
 }

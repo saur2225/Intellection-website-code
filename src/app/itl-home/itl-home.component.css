@@ -23,7 +23,9 @@
     justify-content: center;
     min-height: 90vh;
 }
-
+.itlBtn{
+    display: flex;
+}
 .flying_kid{
     width: 10rem;
 }

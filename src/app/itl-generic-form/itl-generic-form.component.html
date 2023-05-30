@@ -13,33 +13,33 @@
                   <img class="uploadimg" [src]="url ? url : 'assets/upload_profile.png'"> 
                   <div class="hover-text">Choose file</div>
                   <div class="background"></div>
-                  
                 </label>
+                <span class="userProfile">Upload Image</span>
                 <br/>
                 <input id="fileInput" type='file' (change)="onSelectFile($event)">
             </div>
             <form action="" [formGroup]="genericForm">
                 <div class="input_wrapper">
-                    <input type="text" class="inputText" formControlName="parentName" required/>
+                    <input type="text" class="inputText mainTxt" formControlName="parentName" required/>
                     <span class="floating-label-form">Parent Name</span>
                     <span class="errorLog" *ngIf="genericForm.get('parentName')?.touched && genericForm.get('parentName')?.invalid">Please enter valid details</span>
                 </div>
                 <div class="input_wrapper">
-                    <input type="text" class="inputText" formControlName="designation" required/>
+                    <input type="text" class="inputText mainTxt" formControlName="designation" required/>
                     <span class="floating-label-form">Designation</span>
                     <span class="errorLog" *ngIf="genericForm.get('designation')?.touched && genericForm.get('designation')?.invalid">Please enter valid details</span>
                 </div>
                 <div class="input_wrapper">
-                    <input type="text" class="inputText" formControlName="companyName" required/>
+                    <input type="text" class="inputText notOptional" formControlName="companyName"/>
                     <span class="floating-label-form">Company Name (optional)</span>
                 </div>
                 <div class="input_wrapper">
-                    <input type="text" class="inputText" formControlName="email" required/>
+                    <input type="text" class="inputText mainTxt" formControlName="email" required/>
                     <span class="floating-label-form">Email</span>
                     <span class="errorLog" *ngIf="genericForm.get('email')?.touched && genericForm.get('email')?.invalid">Please enter valid details</span>
                 </div>
                 <div class="input_wrapper">
-                    <input type="text" class="inputText" formControlName="phoneNumber" required/>
+                    <input type="text" class="inputText mainTxt" formControlName="phoneNumber" required/>
                     <span class="floating-label-form">Phone Number</span>
                     <span class="errorLog" *ngIf="genericForm.get('phoneNumber')?.touched && genericForm.get('phoneNumber')?.invalid">Please enter valid details</span>
                 </div>

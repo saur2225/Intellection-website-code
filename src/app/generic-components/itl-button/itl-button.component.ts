@@ -10,6 +10,7 @@ export class ItlButtonComponent implements OnInit {
   @Input() btnMargin!: string; 
   @Input() disableBtn!: boolean;
   @Input() fontSizeValue!: string;
+  @Input() borderRadius!: string;
   @Output() btnClick = new EventEmitter();
   constructor() { }
 

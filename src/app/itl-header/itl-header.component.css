@@ -216,12 +216,14 @@ header {
 }
 .brand_name{
   margin-left: 5%;
+  white-space: nowrap;
 }
 .slider_logo{
   width: 1.2rem;
 }
 .contact_section{
   display: none;
+  border-top: 1px solid #ffffff;
 }
 @media screen and (max-width: 900px) {
   .dropdown-content{
@@ -260,10 +262,18 @@ header {
     font-size: 0.4rem;
   }
   .header .menu .drawer a {
-    font-size: 0.45rem !important;
+    font-size: 0.5rem !important;
   }
   .dropbtn{
-    font-size: 0.45rem !important;
+    font-size: 0.5rem !important;
 
+  }
+  .flexWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .down_arr img{
+    width: 0.7rem;
   }
 }

@@ -1,3 +1,3 @@
-<button [ngStyle]="{'margin-top': btnMargin, opacity: disableBtn? 0.6 : 1, cursor:disableBtn ? 'not-allowed' : 'pointer', 'font-size': fontSizeValue ? fontSizeValue : '0.32rem'}" [disabled]="disableBtn" (click)="btnClick.emit()">
+<button [ngStyle]="{'margin-top': btnMargin, opacity: disableBtn? 0.6 : 1, cursor:disableBtn ? 'not-allowed' : 'pointer', 'font-size': fontSizeValue ? fontSizeValue : '0.32rem', 'border-radius': borderRadius ? borderRadius : '10px' }" [disabled]="disableBtn" (click)="btnClick.emit()">
   {{btnTxt}}
 </button>

@@ -123,8 +123,7 @@
 .inputText:focus{
   outline: none;
 }
-.inputText:focus ~ .floating-label-form,
-.inputText:not(:focus):valid ~ .floating-label-form{
+.inputText:focus ~ .floating-label-form{
   top: 5px;
   outline: none;
   bottom: 10px;
@@ -135,8 +134,34 @@
   font-weight: 600;
 }
 
+.mainTxt:not(:focus):valid ~ .floating-label-form{
+  top: 5px;
+  outline: none;
+  bottom: 10px;
+  left: 0px;
+  font-size: 0.12rem;
+  opacity: 1;
+  color: #3D5CFF;
+  font-weight: 600;
+}
+
+
+// .inputText:focus ~ .floating-label-form,
+// .inputText:not(:focus) ~ .floating-label-form{
+//   top: 5px;
+//   outline: none;
+//   bottom: 10px;
+//   left: 0px;
+//   font-size: 0.12rem;
+//   opacity: 1;
+//   color: #3D5CFF;
+//   font-weight: 600;
+// }
+
+
 .inputText {
-  font-size: 14px;
+  // font-size: 14px;
+  font-size: 0.12rem;
   height: 35px;
 }
 
@@ -155,6 +180,8 @@
 .image_upload{
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   line-height: 0;
 }
 
@@ -167,26 +194,52 @@ form{
 .itlBtnMain{
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 .errorLog{
   margin-top: 3%;
 }
+.userProfile{
+  margin-top: 5%;
+  font-size: 0.18rem;
+}
 @media screen and (max-width: 900px) {
   .formContainer{
     min-width: 80%;
+    margin-top: 25%;
   }
   .floating-label-form{
     font-size: 0.35rem;
   }
-  .inputText:focus ~ .floating-label-form,
-  .inputText:not(:focus):valid ~ .floating-label-form{
+  .inputText:focus ~ .floating-label-form{
     font-size: 0.25rem;
   }
+  .inputText:focus ~ .floating-label-form,
+  .mainTxt:not(:focus):valid ~ .floating-label-form{
+    font-size: 0.25rem;
+  }
+  // .floating-label-form{
+  //   font-size: 0.35rem;
+  // }
   .mainTxt{
     font-size: 0.4rem !important;
   }.subTxt{
     font-size: 0.35rem !important;
+  }
+  .top_form{
+    span{
+      width: 0.51rem;
+      height: 0.51rem;
+      font-size: 0.45rem !important;
+    }
+  }
+  .userProfile{
+    margin-top: 3%;
+    font-size: 0.25rem;
+  }
+  .hoverable{
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
