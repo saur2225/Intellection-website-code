@@ -1,32 +1,39 @@
 .pricing_header{
     text-align: center;
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     font-weight: 800;
     margin-top: 2%;
 }
 .pricing_container{
     background-image: url('../../assets/pricing_bg.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     min-height: 80vh;
     margin-top: 5%;
 }
 .pricing_subHeader{
-    color: #909090;
     text-align: center;
-    font-size: 0.4rem;
+    font-size: 0.3rem;
 }
 .card_wrapper{
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    flex-wrap: wrap;
     margin-bottom: 5%;
 }
 .secondCard{
     margin-left: 40px;
 }
-
+.rocket{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 3rem;
+}
+.special_highlight{
+    color: #3d5cff;
+    font-weight: 550;
+}
 @media screen and (max-width: 900px){
     .secondCard{
         margin-left: 0 !important;
@@ -34,5 +41,14 @@
     }
     .pricing_container{
         margin-top: 12%;
+        background-size: cover;
+    }
+    .card_wrapper{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+    .rocket{
+        left: -4% !important;
     }
 }

@@ -3,9 +3,10 @@
     Ready to start with Intellection?
   </div>
   <div class="pricing_subHeader">
-    Join the waitlist to avail the early bird offer
+    <span class="special_highlight">Join the Intellection family now</span> to avail the <span class="special_highlight">early bird offer</span>
   </div>
   <div class="card_wrapper">
+    <img class="rocket" src="../../assets/rocket.png" alt="" srcset="">
     <div [ngClass]="{'secondCard': i === 1}" *ngFor="let item of pricingDetails; let i = index">
       <itl-pricing-card [pricing]="item"></itl-pricing-card>
     </div>
