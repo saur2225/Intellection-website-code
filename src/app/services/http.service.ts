@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
-  baseUrl = 'https://intellection.life/api';
+  baseUrl = 'https://api.intellection.life/api';
   constructor(private http: HttpClient) { }
 
   saveContactDetails(contactDetails:any){
