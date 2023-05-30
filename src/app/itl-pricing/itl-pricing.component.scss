@@ -23,6 +23,7 @@
 }
 .secondCard{
     margin-left: 40px;
+    margin-right: 40px;
 }
 .rocket{
     position: absolute;
@@ -38,6 +39,8 @@
     .secondCard{
         margin-left: 0 !important;
         margin-top: 5%;
+        margin-right: 0 !important;
+        margin-bottom: 5%;
     }
     .pricing_container{
         margin-top: 12%;

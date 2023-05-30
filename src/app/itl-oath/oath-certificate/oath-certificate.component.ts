@@ -9,6 +9,7 @@ export class OathCertificateComponent implements OnInit, AfterViewInit {
   @Input('certData') certData: any;
   @Input('checkCert') checkCert: any;
   @Output() closeCertificate = new EventEmitter();
+  @Output() backToForm = new EventEmitter();
   @ViewChild('cert') cert!: ElementRef;
   @ViewChild('certOverlay') certOverlay!: ElementRef;
   constructor() { }

@@ -133,7 +133,16 @@
   color: #3D5CFF;
   font-weight: 600;
 }
-
+.notOptional:focus .floating-label-form{
+  top: 5px;
+  outline: none;
+  bottom: 10px;
+  left: 0px;
+  font-size: 0.12rem;
+  opacity: 1;
+  color: #3D5CFF;
+  font-weight: 600;
+}
 .mainTxt:not(:focus):valid ~ .floating-label-form{
   top: 5px;
   outline: none;
@@ -161,7 +170,7 @@
 
 .inputText {
   // font-size: 14px;
-  font-size: 0.12rem;
+  font-size: 0.25rem;
   height: 35px;
 }
 

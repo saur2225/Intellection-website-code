@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from '../services/http.service';
 @Component({
@@ -7,15 +7,20 @@ import { HttpService } from '../services/http.service';
   styleUrls: ['./itl-generic-form.component.scss'],
   providers: [HttpService]
 })
-export class ItlGenericFormComponent implements OnInit, AfterViewInit {
+export class ItlGenericFormComponent implements OnInit, AfterViewInit, OnChanges {
   @ViewChild('form') form!: ElementRef;
   @ViewChild('formOverlay') formOverlay!: ElementRef;
+  @ViewChild('companyName') companyName!: ElementRef;
+  @ViewChild('optionalData') optionalData!: ElementRef;
+
+
   @Input() defaultForm!: boolean;
+  @Input() reInitForm!: any;
   @Output() closeFrom = new EventEmitter();
   @Output() submittedForm = new EventEmitter();
 
   genericForm: FormGroup;
-  oathTakenSuccess: boolean = false;
+  // oathTakenSuccess: boolean = false;
   constructor(public fb: FormBuilder, private httpService: HttpService) { 
     this.genericForm = this.fb.group({
       file: [null],
@@ -28,7 +33,17 @@ export class ItlGenericFormComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() { }
-  
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['reInitForm']){
+      this.url = this.reInitForm.file;
+      this.genericForm.patchValue({'parentName': this.reInitForm.parentName});
+      this.genericForm.patchValue({'designation': this.reInitForm.designation});
+      this.genericForm.patchValue({'companyName': this.reInitForm.companyName});
+      this.genericForm.patchValue({'email': this.reInitForm.email});
+      this.genericForm.patchValue({'phoneNumber': this.reInitForm.phoneNumber});
+      this.makeFocus();
+    }
+  }
   ngAfterViewInit(): void {
     this.form.nativeElement.style.top = (window.pageYOffset-(this.defaultForm ? -50 : 300)) > 0 ? window.pageYOffset-(this.defaultForm ? -50  : 300) +'px': 0 +'px'; 
     this.formOverlay.nativeElement.style.top = window.pageYOffset-500+'px';
@@ -65,18 +80,16 @@ export class ItlGenericFormComponent implements OnInit, AfterViewInit {
     formData.append('email', this.genericForm.get('email')?.value);
     formData.append('phoneNumber', this.genericForm.get('phoneNumber')?.value);
 
-    this.httpService.takeOath(formData).subscribe((data) => {
-      this.oathTakenSuccess = true;
-      this.genericForm.reset();
-      this.url = null;
-      this.submittedForm.emit(data);
-      setTimeout(() => {
-        this.oathTakenSuccess = false;
-      }, 3000);
-    });
+    this.submittedForm.emit(formData);
   }
 
   public delete(){
     this.url = null;
+  }
+
+  makeFocus(){
+    this.companyName.nativeElement.focus();
+    this.optionalData.nativeElement.style.top = '5px';
+    this.optionalData.nativeElement.style.color = '#3D5CFF';
   }
 }

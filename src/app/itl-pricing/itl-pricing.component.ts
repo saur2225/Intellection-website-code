@@ -8,6 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class ItlPricingComponent implements OnInit {
   pricingDetails = [
     {
+      year: '1',
+      profits: [
+        "Academics Module",
+        "Health Module",
+        "Co-curricular Module",
+        "Memories",
+        "5 webinars",
+        "2 psychological sessions"],
+        perYear: 1500,
+        type: 'month',
+        fullPrice: 18000
+    },
+    {
       year: '3',
       profits: [
         "Academics Module",

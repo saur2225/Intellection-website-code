@@ -1,9 +1,9 @@
 <div class="oathContainer">
   <div class="formWrap" *ngIf="showOathForm" #formWrap>
-    <itl-generic-form (closeFrom)="showOathForm = false" (submittedForm)="showFilledCertificate($event)"></itl-generic-form>
+    <itl-generic-form [reInitForm]="reInitForm" (closeFrom)="showOathForm = false" (submittedForm)="showFilledCertificate($event)"></itl-generic-form>
   </div>
   <div class="certContainer" *ngIf="showOathCertificate">
-    <itl-oath-certificate [certData]="filledDetails ? filledDetails?.data : personalDetails" [checkCert]="personalDetails ? true : false" (closeCertificate)="testFunc()"></itl-oath-certificate>
+    <itl-oath-certificate [certData]="filledDetails ? filledDetails?.data : personalDetails" [checkCert]="personalDetails ? true : false" (closeCertificate)="testFunc()" (backToForm)="backToFormHandler($event)"></itl-oath-certificate>
   </div>
   <div class="oath_des">
     <img class="oath_img" src="assets/Layer_1.png" alt="" srcset="">

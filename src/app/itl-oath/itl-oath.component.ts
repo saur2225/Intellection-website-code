@@ -12,6 +12,7 @@ export class ItlOathComponent implements OnInit {
   oathDetails: any;
   filledDetails: any;
   personalDetails:any;
+  reInitForm: any;
   constructor(private httpService: HttpService) { }
 
   ngOnInit() {
@@ -23,9 +24,11 @@ export class ItlOathComponent implements OnInit {
     this.showOathForm = true;
   }
   showFilledCertificate(oathData:any){
-    this.showOathForm = false;
-    this.filledDetails = oathData;
-    this.showOathCertificate = true;
+    this.httpService.takeOath(oathData).subscribe((data) => {
+      this.filledDetails = data;
+      this.showOathForm = false;
+      this.showOathCertificate = true;
+    });
   }
   testFunc(){
     this.showOathCertificate = false;
@@ -34,5 +37,10 @@ export class ItlOathComponent implements OnInit {
   managePersonalCert(oath:any){
     this.personalDetails = oath;
     this.showOathCertificate = true;
+  }
+  backToFormHandler(event:any){
+    this.showOathCertificate = false;
+    this.showOathForm = true;
+    this.reInitForm = event;
   }
 }
