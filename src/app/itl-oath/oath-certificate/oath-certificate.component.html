@@ -3,9 +3,9 @@
 <div class="certificateContainer" #cert>
   <span class="closeOathCertificae" *ngIf="!certData || checkCert" (click)="closeCert()">&times;</span>
   <!-- [ngStyle]="{'justify-content': certData && !checkCert ? 'space-between' : 'flex-end'}" -->
-  <div class="logo_cont" >
+  <div class="logo_cont" [ngStyle]="{'justify-content': certData && !checkCert ? 'space-between' : 'flex-end'}">
     <!--  *ngIf="certData && !checkCert" -->
-    <itl-button class="backToEdit" [btnTxt]="'Back to editing'" [fontSizeValue]="'0.15rem'" [borderRadius]="'0.5rem'" (btnClick)="backToForm.emit(certData)"></itl-button>
+    <itl-button class="backToEdit" *ngIf="certData && !checkCert" [btnTxt]="'Back to editing'" [fontSizeValue]="'0.15rem'" [borderRadius]="'0.5rem'" (btnClick)="backToForm.emit(certData)"></itl-button>
     <img class="logo_cert" src="../../../assets/itl_logo.png" alt="" srcset="">
   </div>
   <div class="inner_cert">
