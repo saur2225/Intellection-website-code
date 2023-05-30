@@ -8,9 +8,17 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ItlHomeComponent implements OnInit {
   showBookForm: boolean = false;
+  showAdvertise: boolean = false;
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.showAdvertise = true;
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    }, 2000)
   }
-
+  closeAdvertise(){
+    this.showAdvertise = false;
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
+  }
 }

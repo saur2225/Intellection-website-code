@@ -6,7 +6,7 @@
   text-align: center;
 }
 .contact_heading{
-  font-size: 44px;
+  font-size: 0.5rem;
   font-weight: bold;
 
 }
@@ -262,6 +262,9 @@ form{
 @media screen and (max-width: 900px) {
   .slider_container{
     width: 100% !important;
+  }
+  .contact_heading{
+    font-size: 0.8rem;
   }
   .slider{
     height: 60vh !important;

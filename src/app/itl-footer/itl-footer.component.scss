@@ -56,11 +56,12 @@
 
 @media screen and (max-width: 900px){
     .footer_container{
-        flex-direction: column;
+        // flex-direction: column;
+        flex-wrap: wrap;
         font-size: 0.5rem !important;
     }
-    .footer_2{
-        margin-top: 5%;
-        margin-bottom: 5%;
+    .footer_2, .footer_3{
+        margin-top: 8%;
+        margin-bottom: 8%;
     }
 }

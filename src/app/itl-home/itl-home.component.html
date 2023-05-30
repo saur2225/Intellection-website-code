@@ -3,12 +3,20 @@
     <div class="itl_home_left">
         <div class="itl_home_left_text">Make your child their <span style="color:#66B0F8">Future's</span> <span style="color:#447CB2"> Architect.</span></div>
         <div class="itl_home_left_subtxt">Be onboard with us if you are willing to take a <br> holistic approach to your child’s development.</div>
-        <itl-button class="itlBtn" [btnTxt]="'Book a demo'" [btnMargin]="'40px'" (click)="showBookForm = true"></itl-button>
+        <itl-button class="itlBtn" [btnTxt]="'Book a demo'" [btnMargin]="'40px'" [fontSizeValue]="'0.35rem'" (click)="showBookForm = true"></itl-button>
     </div>
     <div class="itl_home_right">
         <!-- <img src="../../assets/home_main.png" alt="" srcset=""> -->
         <img class="flying_kid" src="../../assets/flying_kid.png" alt="" srcset="">
     </div>
 </div>
+<div class="popup_wrappers">
+    <div class="more_wrapper" *ngIf="showAdvertise">
+        <img class="popup_web" src="../../assets/popup_web.png" alt="" srcset="">
+        <img class="popup_mobile" src="../../assets/popup_mobile.png" alt="" srcset="">
+        <span class="cutoption" (click)="closeAdvertise()">&times;</span>
+    </div>
+</div>
+<div class="popup_overlay" *ngIf="showAdvertise"></div>
 <itl-home-what-we-do></itl-home-what-we-do>
 <itl-contact id="contactus"></itl-contact>
