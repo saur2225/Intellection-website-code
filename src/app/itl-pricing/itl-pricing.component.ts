@@ -51,7 +51,7 @@ export class ItlPricingComponent implements OnInit {
         "10 psychological sessions"],
         perYear: 30000,
         fullPrice: 30000,
-        offPrice: 18000,
+        offPrice: 20000,
         cutYear:50000,
         downTwo: 10000,
         downOne: 6000,
