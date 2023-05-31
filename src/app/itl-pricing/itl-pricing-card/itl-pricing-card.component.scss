@@ -19,6 +19,9 @@
 .details_wrapper{
     display: flex;
     align-items: center;
+    img{
+        width: 0.3rem;
+    }
 }
 .detail_name{
     margin-left: 10px;
@@ -28,7 +31,7 @@
 .card_header{
     width: 100%;
     font-size: 0.4rem;
-    font-weight: bold;
+    font-weight: 800;
     border-bottom: 1px solid #D4D4D4;
     text-align: center;
     padding: 0.3rem 0rem;
@@ -46,6 +49,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-left: 0.5rem;
+        .finalPrice{
+            font-size: 0.3rem;
+        }
         .subFinal{
             text-decoration: line-through;
             font-size: 0.2rem;
@@ -91,6 +98,13 @@
     color: #9F9F9F;
 }
 @media screen and (max-width: 900px) {
+    .details_wrapper{
+        display: flex;
+        align-items: center;
+        img{
+            width: 0.5rem;
+        }
+    }
     .card_header{
         font-size: 0.8rem;
     }
@@ -107,6 +121,9 @@
     .perYear{
         .left_year{
             padding: 0rem 1rem;
+            .finalPrice{
+                font-size: 0.55rem;
+            }
             .subFinal{
                 font-size: 0.45rem;
             }
@@ -116,7 +133,7 @@
     .right_year{
         padding: 0.23rem !important;
     }
-    // .pricing_card{
-    //     padding: 0.4rem 1rem;
-    // }
+    .pricing_card{
+        max-width: 80vw;
+    }
 }
