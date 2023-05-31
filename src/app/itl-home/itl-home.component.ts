@@ -12,10 +12,10 @@ export class ItlHomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.showAdvertise = true;
       document.getElementsByTagName('html')[0].style.overflow = 'hidden';
-    }, 2000)
+    // }, 2000)
   }
   closeAdvertise(){
     this.showAdvertise = false;

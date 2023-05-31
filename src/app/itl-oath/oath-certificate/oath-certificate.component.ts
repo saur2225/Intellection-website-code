@@ -23,6 +23,7 @@ export class OathCertificateComponent implements OnInit, AfterViewInit {
     if(this.certData){
       this.showBtns = true;
     }
+    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
         // close modal here
@@ -31,7 +32,7 @@ export class OathCertificateComponent implements OnInit, AfterViewInit {
     })
   }
 
-  public openPDF(): void {
+  public openPDF(parentName: string): void {
     let DATA: any = document.getElementById('htmlData');
     html2canvas(DATA).then((canvas) => {
       let fileWidth = 208;
@@ -40,14 +41,11 @@ export class OathCertificateComponent implements OnInit, AfterViewInit {
       let PDF = new jsPDF('p', 'mm', 'a4', true);
       let position = 0;
       PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
-      PDF.save('angular-demo.pdf');
+      PDF.save(`${parentName}_intellection.pdf`);
     });
   }
 
   ngAfterViewInit(): void {
-    console.log(window.pageYOffset);
-    
-    // this.cert.nativeElement.style.top = ;
     this.certOverlay.nativeElement.style.top = 0+'px';
     window.scrollTo(0, 0)
   }
@@ -57,8 +55,8 @@ export class OathCertificateComponent implements OnInit, AfterViewInit {
   submitFinalOath(){
     this.showBtns = false;
     setTimeout(() =>{
-      this.openPDF();
-    }, 1000)
-    this.submitFinal.emit(this.certData);
+      this.openPDF(this.certData.parentName);
+      this.submitFinal.emit(this.certData);
+    }, 500)
   }
 }

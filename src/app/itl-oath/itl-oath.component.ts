@@ -56,6 +56,7 @@ export class ItlOathComponent implements OnInit {
     this.showOathCertificate = true;
   }
   backToFormHandler(event:any){
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
     this.showOathCertificate = false;
     this.showOathForm = true;
     this.reInitForm = event;
@@ -73,6 +74,8 @@ export class ItlOathComponent implements OnInit {
     this.httpService.takeOath(formData).subscribe((data) => {
       this.showOathForm = false;
       this.showOathCertificate = false;
+      document.getElementsByTagName('html')[0].style.overflow = 'auto';
     });
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
   }
 }

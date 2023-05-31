@@ -173,7 +173,7 @@ body{
 
 .inputText {
   // font-size: 14px;
-  font-size: 0.25rem;
+  font-size: 0.22rem;
   height: 35px;
 }
 
@@ -216,6 +216,9 @@ form{
   font-size: 0.18rem;
 }
 @media screen and (max-width: 900px) {
+  .notOptional{
+    font-size: 0.4rem !important;
+  }
   .formContainer{
     min-width: 80%;
     margin-top: 25%;

@@ -33,8 +33,18 @@
     font-size: 0.15rem;
 }
 
-// @media screen and (max-width: 1200px) {
-//     img{
-//         width: 50%;
-//     }
-// }
+@media screen and (max-width: 1200px) {
+    .batch_main{
+        img{
+            width: 1.9rem;
+            height: 1.9rem;
+            border-radius: 50%;
+        }
+    }
+    .batch_name{
+        font-size: 0.45rem !important;
+    }
+    .styleCls{
+        font-size: 0.38rem !important;
+    }
+}

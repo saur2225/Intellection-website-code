@@ -1,7 +1,7 @@
 <div class="batch_container" (click)="showPersonalCertificate()">
   <div class="batch_main"><img [src]="oathData.profileUrl" alt="" srcset=""></div>
   <div class="batch_name">{{oathData.parentName}}</div>
-  <div class="batch_designation">{{oathData.designation}}</div>
-  <div class="batch_company">{{oathData.companyName}}</div>
-  <div class="batch_date">{{oathData.createdAt.split('T')[0]}}</div>
+  <div class="styleCls batch_designation">{{oathData.designation}}</div>
+  <div class="styleCls batch_company">{{oathData.companyName}}</div>
+  <div class="styleCls batch_date">{{oathData.createdAt.split('T')[0]}}</div>
 </div>

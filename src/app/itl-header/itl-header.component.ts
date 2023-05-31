@@ -24,10 +24,12 @@ export class ItlHeaderComponent implements OnInit, AfterViewInit {
     } 
   }
   openOfferings() {
+    this.companyDropdown.nativeElement.classList.remove('show');
     this.offeringsDropdown.nativeElement.classList.toggle("show");
   }
 
   openCompany(){
+    this.offeringsDropdown.nativeElement.classList.remove('show');
     this.companyDropdown.nativeElement.classList.toggle("show");
   }
   
@@ -47,19 +49,19 @@ export class ItlHeaderComponent implements OnInit, AfterViewInit {
     };
 
     menu_btn?.addEventListener("click", (e) => {
-    menu?.classList.add("blur");
-    drawer?.classList.add("drawer-visible");
-    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
-    body?.classList.add("body");
+      menu?.classList.add("blur");
+      drawer?.classList.add("drawer-visible");
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+      body?.classList.add("body");
     });
 
     close_btn?.addEventListener("click", (e) => {
-    close();
-    document.getElementsByTagName('html')[0].style.overflow = 'auto';
+      close();
+      document.getElementsByTagName('html')[0].style.overflow = 'auto';
     });
 
     blank?.addEventListener("click", (e) => {
-    close();
+      close();
     });
     if(drawer){
       Array.from(drawer.querySelectorAll("anchorone")).forEach((element) => {

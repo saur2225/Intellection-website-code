@@ -34,7 +34,9 @@ export class ItlGenericFormComponent implements OnInit, AfterViewInit, OnChanges
     });
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+   }
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['reInitForm'] && this.reInitForm){
       this.url = this.reInitForm.file;
@@ -43,7 +45,11 @@ export class ItlGenericFormComponent implements OnInit, AfterViewInit, OnChanges
       this.genericForm.patchValue({'companyName': this.reInitForm.companyName});
       this.genericForm.patchValue({'email': this.reInitForm.email});
       this.genericForm.patchValue({'phoneNumber': this.reInitForm.phoneNumber});
+      this.genericForm.patchValue({'profileUrl': this.reInitForm.profileUrl})
+      this.genericForm.patchValue({'file': this.reInitForm.file})
       this.url = this.reInitForm.profileUrl;
+      console.log("AA", this.genericForm.value);
+      console.log("AA", this.genericForm.invalid);
     }
   }
   ngAfterViewInit(): void {

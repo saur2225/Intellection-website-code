@@ -5,7 +5,7 @@
       <img src="../../../assets/check.png" alt="" srcset="">
       <span class="detail_name">{{pricing.profits[0]}}</span>
     </div>
-    <div class="details_wrapper perYear">
+    <div class="details_wrapper perYear2">
       <img src="../../../assets/check.png" alt="" srcset="">
       <span class="detail_name">{{pricing.profits[1]}}</span>
     </div>
@@ -13,7 +13,7 @@
       <img src="../../../assets/check.png" alt="" srcset="">
       <span class="detail_name">{{pricing.profits[2]}}</span>
     </div>
-    <div class="details_wrapper perYear">
+    <div class="details_wrapper perYear2">
       <img src="../../../assets/check.png" alt="" srcset="">
       <span class="detail_name">{{pricing.profits[3]}}</span>
     </div>
@@ -21,12 +21,24 @@
       <img src="../../../assets/check.png" alt="" srcset="">
       <span class="detail_name">{{pricing.profits[4]}}</span>
     </div>
-    <div class="details_wrapper perYear">
+    <div class="details_wrapper perYear2">
       <img src="../../../assets/check.png" alt="" srcset="">
       <span class="detail_name">{{pricing.profits[5]}}</span>
     </div>
   </div>
 
-  <div class="perYear">&#8377; &nbsp;{{pricing.perYear}}{{pricing.type === 'month' ? '/month' : '/year'}}</div>
-  <itl-button class="pricingBtn" [btnTxt]="'&#8377; &nbsp;21000'" [fontSizeValue]="'0.2rem'"></itl-button>
+  <div class="perYear">
+    <div class="left_year">
+      <span class="finalPrice">&#8377; &nbsp;{{pricing.perYear}}</span>
+      <span class="subFinal">&#8377; &nbsp;{{pricing.perYear}}</span>
+    </div>
+    <div class="right_year">
+      &#8377; 6000 Off
+    </div>
+  </div>
+  <div class="card_footer">
+    <div class="withOffer">&#8377; 1000/month</div> &nbsp; &nbsp;
+    <div class="withoutOffer">&#8377; 1500/month</div>
+  </div>
+  <!-- <itl-button class="pricingBtn" [btnTxt]="'&#8377; &nbsp;21000'" [fontSizeValue]="'0.2rem'"></itl-button> -->
 </div>
