@@ -1,5 +1,5 @@
 <div class="pricing_card" *ngIf="pricing">
-  <div class="card_header">{{pricing.year}} Years</div>
+  <div class="card_header">{{pricing.year}} {{pricing.year === '1' ? 'Year' : 'Years'}}</div>
   <div class="card_details">
     <div class="details_wrapper">
       <img src="../../../assets/check.png" alt="" srcset="">
@@ -30,15 +30,15 @@
   <div class="perYear">
     <div class="left_year">
       <span class="finalPrice">&#8377; &nbsp;{{pricing.perYear}}</span>
-      <span class="subFinal">&#8377; &nbsp;{{pricing.perYear}}</span>
+      <span class="subFinal">&#8377; &nbsp;{{pricing.cutYear}}</span>
     </div>
     <div class="right_year">
-      &#8377; 6000 Off
+      &#8377; {{pricing.offPrice}} Off
     </div>
   </div>
   <div class="card_footer">
-    <div class="withOffer">&#8377; 1000/month</div> &nbsp; &nbsp;
-    <div class="withoutOffer">&#8377; 1500/month</div>
+    <div class="withOffer">&#8377; {{pricing.downOne}}/ {{pricing.type === 'month' ? 'month' : 'year'}}</div> &nbsp; &nbsp;
+    <div class="withoutOffer">&#8377; {{pricing.downTwo}}/ {{pricing.type === 'month' ? 'month' : 'year'}}</div>
   </div>
   <!-- <itl-button class="pricingBtn" [btnTxt]="'&#8377; &nbsp;21000'" [fontSizeValue]="'0.2rem'"></itl-button> -->
 </div>
