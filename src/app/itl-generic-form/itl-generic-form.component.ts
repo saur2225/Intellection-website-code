@@ -29,25 +29,28 @@ export class ItlGenericFormComponent implements OnInit, AfterViewInit, OnChanges
       companyName: [''],
       email: ['', [Validators.required, Validators.email]],
       phoneNumber: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      profileUrl: ['', [Validators.required]],
+      oathId: ['']
     });
   }
 
   ngOnInit() { }
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes['reInitForm']){
+    if(changes['reInitForm'] && this.reInitForm){
       this.url = this.reInitForm.file;
       this.genericForm.patchValue({'parentName': this.reInitForm.parentName});
       this.genericForm.patchValue({'designation': this.reInitForm.designation});
       this.genericForm.patchValue({'companyName': this.reInitForm.companyName});
       this.genericForm.patchValue({'email': this.reInitForm.email});
       this.genericForm.patchValue({'phoneNumber': this.reInitForm.phoneNumber});
-      this.makeFocus();
+      this.url = this.reInitForm.profileUrl;
     }
   }
   ngAfterViewInit(): void {
-    this.form.nativeElement.style.top = (window.pageYOffset-(this.defaultForm ? -50 : 300)) > 0 ? window.pageYOffset-(this.defaultForm ? -50  : 300) +'px': 0 +'px'; 
+    this.form.nativeElement.style.top = (window.pageYOffset-(this.defaultForm ? -50 : 300)) > 0 ? window.pageYOffset-(this.defaultForm ? -50  : 350) +'px': 0 +'px'; 
     this.formOverlay.nativeElement.style.top = window.pageYOffset-500+'px';
-    window.scrollTo(0, window.pageYOffset-350)
+    window.scrollTo(0, window.pageYOffset-350);
+    this.makeFocus();
   }
 
   url:any = '';
@@ -67,20 +70,15 @@ export class ItlGenericFormComponent implements OnInit, AfterViewInit, OnChanges
 
       reader.onload = (event:any) => { // called once readAsDataURL is completed
         this.url = event.target.result;
+        this.genericForm.patchValue({profileUrl: this.url})
       }
     }
   }
 
   submitOath(){
-    let formData: any = new FormData();
-    formData.append('parentName', this.genericForm.get('parentName')?.value);
-    formData.append('file', this.genericForm.get('file')?.value);
-    formData.append('designation', this.genericForm.get('designation')?.value);
-    formData.append('companyName', this.genericForm.get('companyName')?.value);
-    formData.append('email', this.genericForm.get('email')?.value);
-    formData.append('phoneNumber', this.genericForm.get('phoneNumber')?.value);
-
-    this.submittedForm.emit(formData);
+    let timeValue = (this.genericForm.get('parentName')?.value.substring(0,3) + new Date().getTime()).substring(0,10).toUpperCase();
+    this.genericForm.patchValue({oathId: timeValue})
+    this.submittedForm.emit(this.genericForm.value);
   }
 
   public delete(){
@@ -88,8 +86,11 @@ export class ItlGenericFormComponent implements OnInit, AfterViewInit, OnChanges
   }
 
   makeFocus(){
-    this.companyName.nativeElement.focus();
-    this.optionalData.nativeElement.style.top = '5px';
-    this.optionalData.nativeElement.style.color = '#3D5CFF';
+    if(this.companyName && this.companyName.nativeElement.value !== ''){
+      console.log("hey there");
+      this.companyName.nativeElement.focus();
+      this.optionalData.nativeElement.style.top = '5px';
+      this.optionalData.nativeElement.style.color = '#3D5CFF';
+    }
   }
 }

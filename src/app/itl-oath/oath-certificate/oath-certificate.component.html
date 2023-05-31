@@ -1,13 +1,14 @@
 <div class="certOverlay" #certOverlay>
 </div>
-<div class="certificateContainer" #cert>
+<div class="certificateContainer" #cert id="htmlData">
   <span class="closeOathCertificae" *ngIf="!certData || checkCert" (click)="closeCert()">&times;</span>
   <!-- [ngStyle]="{'justify-content': certData && !checkCert ? 'space-between' : 'flex-end'}" -->
   <div class="logo_cont" [ngStyle]="{'justify-content': certData && !checkCert ? 'space-between' : 'flex-end'}">
     <!--  *ngIf="certData && !checkCert" -->
-    <itl-button class="backToEdit" *ngIf="certData && !checkCert" [btnTxt]="'Back to editing'" [fontSizeValue]="'0.15rem'" [borderRadius]="'0.5rem'" (btnClick)="backToForm.emit(certData)"></itl-button>
+    <itl-button class="backToEdit" *ngIf="certData && !checkCert  && showBtns" [btnTxt]="'Back to editing'" [fontSizeValue]="'0.15rem'" [borderRadius]="'0.5rem'" (btnClick)="backToForm.emit(certData)"></itl-button>
     <img class="logo_cert" src="../../../assets/itl_logo.png" alt="" srcset="">
   </div>
+  <span class="certOathId" *ngIf="certData">ID: {{certData.oathId}}</span>
   <div class="inner_cert">
     <div class="certContent">
       <div class="upperImg"><img [src]="certData ? certData.profileUrl : '../../../assets/upload_profile.png'" alt="" srcset=""></div>
@@ -16,7 +17,7 @@
         <div class="left_lower">
           <div class="certName">{{ certData ? certData.parentName : 'Your Name' }}</div>
           <div class="certDetails forMargin">{{certData? certData.designation : 'Designation'}} , {{certData? certData.companyName : 'Company name'}}</div>
-          <div class="certDate">{{ certData? certData.createdAt.split('T')[0] : 'Date' }}</div>
+          <div class="certDate">{{ certData? '' : 'Date' }}</div>
         </div>
         <div class="right_cert">
           <img src="../../../assets/cr.png" alt="" srcset="">
@@ -27,6 +28,9 @@
         Email: Community@intellection.life &nbsp; &nbsp; Website: www.intellection.life
       </div>
     </div>
-    <itl-button *ngIf="certData && !checkCert" class="certBtn" [btnTxt]="'Submit'" [fontSizeValue]="'0.2rem'" (btnClick)="closeCert()"></itl-button>
+    <itl-button *ngIf="(certData && !checkCert) && showBtns" class="certBtn" [btnTxt]="'Submit'" [fontSizeValue]="'0.2rem'" (btnClick)="submitFinalOath()"></itl-button>
+    <div class="certBtns">
+      <!-- <span  *ngIf="certData && !checkCert" class="download_cert" (click)="openPDF()"><img src="../../../assets/download.png" alt="" srcset=""></span> -->
+    </div>
   </div>
 </div>

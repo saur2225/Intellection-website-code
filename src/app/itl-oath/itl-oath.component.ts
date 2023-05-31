@@ -35,11 +35,16 @@ export class ItlOathComponent implements OnInit {
     document.getElementsByTagName('html')[0].style.overflow = 'hidden';
   }
   showFilledCertificate(oathData:any){
-    this.httpService.takeOath(oathData).subscribe((data) => {
-      this.filledDetails = data;
-      this.showOathForm = false;
-      this.showOathCertificate = true;
-    });
+    document.getElementsByTagName('html')[0].style.overflow = 'auto';
+    this.showOathCertificate = true;
+    this.filledDetails = oathData;
+    this.showOathForm = false;
+    
+    // this.httpService.takeOath(oathData).subscribe((data) => {
+    //   this.filledDetails = data;
+    //   this.showOathForm = false;
+    //   this.showOathCertificate = true;
+    // });
   }
   testFunc(){
     this.showOathCertificate = false;
@@ -54,5 +59,20 @@ export class ItlOathComponent implements OnInit {
     this.showOathCertificate = false;
     this.showOathForm = true;
     this.reInitForm = event;
+  }
+  submitOathApi(oathData:any){
+    let formData: any = new FormData();
+    formData.append('parentName', oathData.parentName);
+    formData.append('file', oathData.file);
+    formData.append('designation', oathData.designation);
+    formData.append('companyName', oathData.companyName);
+    formData.append('email', oathData.email);
+    formData.append('phoneNumber', oathData.phoneNumber);
+    formData.append('oathId', oathData.oathId)
+
+    this.httpService.takeOath(formData).subscribe((data) => {
+      this.showOathForm = false;
+      this.showOathCertificate = false;
+    });
   }
 }
