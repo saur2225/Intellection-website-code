@@ -29,6 +29,7 @@ header {
   justify-content: space-between;
   height: var(--header-height);
   padding: 15px;
+  overflow-y: scroll;
 }
 .header .logo {
   /* padding-left: 40px; */
